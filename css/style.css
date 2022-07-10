@@ -597,6 +597,9 @@ li {
     line-height: 19px;
     margin-bottom: 5px;
     color: #878484;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .popup__form input {
@@ -657,6 +660,16 @@ li {
     position: relative;
 }
 
+.popup__form p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #878484;
+    margin-bottom: 20px;
+}
+
 .form__checkbox label a {
     border-bottom: 1px solid #878484;
     color: #878484;
@@ -700,8 +713,13 @@ li {
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
-    color: #878484;
+    color: #521DA8;
     cursor: pointer;
+}
+
+.popup__form a:hover {
+    opacity: 0.8;
+    transition: 0.3s;
 }
 
 .welcome {
