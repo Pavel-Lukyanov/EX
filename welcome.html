@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exchange - электронный журнал для обслуживающих организаций">
+    <meta name="keywords" content="Exchange, электронный, журнал, обслуживающие, обслуживание, организации, объекты">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.svg">
+    <title>Exchange - сервис электронных журналов</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header__container">
+        <div class="header">
+            <button id="menuBtn" class="menu-btn nav-toggle" aria-label="Меню">
+                <span class="bar-top"></span>
+                <span class="bar-mid"></span>
+                <span class="bar-bot"></span>
+            </button>
+            <a class="logo" href="index.html" aria-label="Главная страница">
+                EX
+            </a>
+            <div class="header__nav">
+                <ul id="navTopMenu">
+                    <li>
+                        <a href="#">
+                            Возможности
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Тарифы
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            О нас
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="menuContainer" class="menu__dropdown">
+        </div>
+    </header>
+    <main class="welcome">
+        <div class="welcome__content">
+            <h1>
+                Exchange - сервис электронных журналов
+            </h1>
+            <p>
+                Контроль объектов, контроль выполнения технического обслуживания и заявок
+            </p>
+            <button data-pointer="signup">
+                Регистрация и вход
+            </button>
+        </div>
+    </main>
+
+    <div id="signup" class="popup">
+        <div class="popup__container">
+            <div class="popup__content">
+                <form autocomplete="off" class="popup__form">
+                    <h3>Войти или зарегистрироваться</h3>
+                    <label>
+                        Номер телефона
+                        <input name="tel" class="make__request" minlength="2" required type="tel">
+                    </label>
+                    <div class="form__checkbox">
+                        <input id="agree" type="checkbox" name="checkbox">
+                        <span></span>
+                        <label for="agree">
+                            Даю согласие на обработку персональных данных и соглашаюсь
+                            с <a href="#"> политикой конфинденциальности</a>.
+                        </label>
+                    </div>
+                    <button type="submit" class="btn">Получить код</button>
+                    <a href="#">
+                        Войти через почту
+                    </a>
+                </form>
+            </div>
+            <button class="popup__close">&#10006;</button>
+        </div>
+    </div>
+    <script src="./js/inputmask.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
