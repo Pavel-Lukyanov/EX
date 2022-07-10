@@ -668,6 +668,8 @@ li {
     line-height: 18px;
     color: #878484;
     margin-bottom: 20px;
+    max-width: 375px;
+    text-align: center;
 }
 
 .form__checkbox label a {
