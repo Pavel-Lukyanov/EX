@@ -223,7 +223,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 222px;
+    padding: 10px 100px 10px 180px;
 }
 
 .logo {
@@ -835,8 +835,9 @@ li {
 .main__content {
     margin-top: 50px;
     margin-left: 280px;
-    margin-right: 150px;
+    margin-right: 100px;
     transition: 0.4s ease-in-out;
+    position: relative;
 }
 
 .left__menu-active {
@@ -851,6 +852,7 @@ li {
     z-index: 12;
     background-color: #FFFFFF;
     width: 100%;
+    left: 0;
 }
 
 .main__form {
@@ -859,6 +861,8 @@ li {
     grid-template-columns: 1fr 1.5fr;
     gap: 30px;
     align-items: center;
+    padding-left: 160px;
+    padding-right: 100px;
 }
 
 .main__search__btn {
@@ -922,6 +926,7 @@ li {
     border: none;
     cursor: pointer;
     transition: 0.3s;
+    white-space: nowrap;
 }
 
 .main__sort__container button:hover {
@@ -986,6 +991,12 @@ li {
     transition: 0.3s;
 }
 
+@media(max-width: 1250px) {
+    .main__form {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media(max-width: 1150px) {
     .welcome {
         background-position: 297px bottom;
@@ -993,6 +1004,11 @@ li {
 }
 
 @media(max-width: 1000px) {
+
+    .main__content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 
     .header {
         padding: 10px 15px;
@@ -1022,10 +1038,16 @@ li {
     }
 
     .top__menu {
+        position: fixed;
         display: block;
         border-bottom: 0.5px solid rgba(84, 83, 84, 0.2);
         padding: 11px 44px 8px 44px;
         justify-content: space-between;
+        margin-top: 20px;
+        z-index: 13;
+        width: 100%;
+        background-color: #FFFFFF;
+        box-sizing: border-box;
     }
 
     .bottom__menu {
@@ -1036,6 +1058,8 @@ li {
         bottom: 0;
         width: 100%;
         box-sizing: border-box;
+        background-color: #FFFFFF;
+        z-index: 12;
     }
 
     .top__menu ul {
