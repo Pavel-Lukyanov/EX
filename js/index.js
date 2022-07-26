@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+
 
 
     //Открытие и закрытие меню юзера по клику
@@ -25,11 +25,13 @@ document.addEventListener('DOMContentLoaded', function () {
     let asideMenuBtn = document.querySelector('#asideMenuBtn');
     let asideMenuTexts = document.querySelectorAll('.aside__menu__link__text');
     let asideMenu = document.querySelector('.aside__menu');
+    let mainContainer = document.querySelector('#mainContainer');
 
 
     if (asideMenuBtn) {
         asideMenuBtn.addEventListener('click', function () {
             asideMenu.classList.toggle('aside__menu-active');
+            mainContainer.classList.toggle('left__menu-active');
 
             for (let asideMenuText of asideMenuTexts) {
                 asideMenuText.classList.toggle('aside__menu__link__text-active');
@@ -49,10 +51,12 @@ document.addEventListener('DOMContentLoaded', function () {
             asideMenuText.classList.add('aside__menu__link__text-active');
             asideMenu.classList.add('aside__menu-active');
         }
+        mainContainer.classList.add('left__menu-active');
     } else {
         for (let asideMenuText of asideMenuTexts) {
             asideMenuText.classList.remove('aside__menu__link__text-active');
             asideMenu.classList.remove('aside__menu-active');
+            mainContainer.classList.remove('left__menu-active');
         }
     }
 
@@ -132,4 +136,3 @@ document.addEventListener('DOMContentLoaded', function () {
             im.mask(tel);
         }
     }
-})
